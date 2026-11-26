@@ -4,6 +4,22 @@
 
 <h1 align="center">Dreeve</h1>
 
+> **Personal Garmin weight fork:** the `garmin-weight` branch adds optional Garmin
+> weigh-in synchronization and a unified weight history with manual entries.
+> Use it with the matching [connector fork](https://github.com/DrSchip/dreeve-garmin-connector/tree/garmin-weight).
+> The upstream Docker images linked below do not include these additions.
+> See the [fork integration documentation](docs/src/content/docs/connectors/garmin-connect.mdx).
+
+### Maintaining this fork
+
+`master` mirrors [upstream Dreeve](https://github.com/dreeveapp/dreeve).
+`garmin-weight` is the long-lived branch containing the local integration; the
+original contribution branch is retained for reference. Merge future upstream
+releases into `garmin-weight` so that the integration and its history are preserved.
+Resolve conflicts and run the upstream CI checks before publishing an updated
+fork image. Validate updated app and connector images together in a separate
+development deployment before updating an existing installation.
+
 <p align="center">
 <a href="https://raw.githubusercontent.com/dreeveapp/dreeve/refs/heads/master/LICENSE"><img src="https://img.shields.io/github/license/dreeveapp/dreeve?color=428f7e&logo=open%20source%20initiative&logoColor=white" alt="License"></a>
 <a href="https://hub.docker.com/r/robiningelbrecht/dreeve"><img src="https://img.shields.io/docker/image-size/robiningelbrecht/dreeve?logo=docker&logoColor=white" alt="Docker Image Size"></a>
